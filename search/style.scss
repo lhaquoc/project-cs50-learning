@@ -1,6 +1,18 @@
-body {
+
+.container {
     display: flex;
     flex-flow: column wrap;
-    align-content: center;
-    padding: 190px 0 0 0;
+    justify-content: center;
+}
+#nav-bar {
+    flex-flow: row wrap;
+    align-items: flex-end;
+    a {
+        text-decoration: none;
+    }
+}
+
+#hplogo {
+    width: 50px;
+    height: 25px;
 }
