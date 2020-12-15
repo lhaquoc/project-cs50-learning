@@ -1,0 +1,8 @@
+body {
+  display: flex;
+  flex-flow: column wrap;
+  align-content: center;
+  padding: 190px 0 0 0;
+}
+
+/*# sourceMappingURL=style.css.map */
