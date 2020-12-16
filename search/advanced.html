@@ -1,21 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <link rel="stylesheet" href="./style.css">
-        <title>Search</title>
-    </head>
-    <body>
-        <div id="nav-bar">
-            <a href="./index.html" class="link">Search</a>
-            <a href="./image.html" class="link">image Search</a>
+
+<head>
+    <link rel="stylesheet" href="/search/style.css">
+    <link rel="stylesheet" href="/styles/bootstrap.min.css">
+    <script src="/scripts/bootstrap.min.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8;charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=1">
+    <meta name="HandheldFriendly" content="true">
+    <title>DuckDuckGo — Privacy, simplified.</title>
+</head>
+
+<body id="pg-index" class="page-index body-home">
+    <div id="nav-bar">
+        <a href="./index.html" class="link">Search</a>
+        <a href="./image.html" class="link">Image Search</a>
+    </div>
+    <div class="content-wrapper-home">
+        <div id="content-homepage" class="content-home">
+            <div class="logo-wrap-home">
+                <a href="./index.html" id="logo-home-page-link" class="logo-homepage"></a>
+            </div>
+            <div class="search-wrap-home">
+                <form id="search-form-homepage" class="search-home search-adv" action="https://google.com/search">
+                    <input id="search-form-input-homepage"  class="search-input-adv" type="text" name="q">
+                </form>
+            </div>
+            <div id="search-button" class="search-button-wrap">
+                <input type="submit" value="Google Search" class="search-button">
+                <input type="submit" value="I’m Feeling Lucky" class="search-button">
+            </div>   
         </div>
-        <div class="container">
-            <img id="hplogo" src="./googlelogo_color_272x92dp.png" alt="Google">
-            <form action="https://google.com/search">
-                <input type="text" name="q">
-                <input type="submit" value="Google Search">
-                <input type="submit" value="I’m Feeling Lucky">
-            </form>
-        </div>
-    </body>
+    </div>
+</body>
+
 </html>
