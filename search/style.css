@@ -5,12 +5,6 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   vertical-align: baseline;
 }
 
-html body {
-  min-height: 100%;
-  padding: 0;
-  margin: 0;
-}
-
 body {
   font-family: sans-serif;
   color: #222;
@@ -30,10 +24,15 @@ a {
   text-decoration: none;
 }
 
-.site-wrapper-home {
-  height: 100%;
-  width: 100%;
-  overflow: hidden;
+#nav-bar {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-end;
+}
+
+#nav-bar > a {
+  text-decoration: none;
+  padding: 20px;
 }
 
 .body-home .site-wrapper-home {
@@ -47,6 +46,7 @@ a {
   left: 0;
   right: 0;
   z-index: 12;
+  padding-top: 30px;
 }
 
 .content-home {
@@ -120,9 +120,7 @@ a {
   text-align: -webkit-center;
 }
 
-.search-button {
-  background-image: -webkit-gradient(top, #f8f9fa, #f8f9fa);
-  background-color: #f8f9fa;
+.search-button:hover, .search-button {
   border: 1px solid #f8f9fa;
   border-radius: 4px;
   color: #3c4043;
@@ -133,8 +131,14 @@ a {
   line-height: 27px;
   height: 36px;
   min-width: 54px;
+  background-image: -webkit-gradient(top, #f8f9fa, #f8f9fa);
+  background-color: #f8f9fa;
   cursor: pointer;
   user-select: none;
+}
+
+.search-button:hover {
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
 }
 
 /*# sourceMappingURL=style.css.map */
