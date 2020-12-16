@@ -1,20 +1,100 @@
-.container {
-  display: flex;
-  flex-flow: column wrap;
-  justify-content: center;
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
 }
 
-#nav-bar {
-  flex-flow: row wrap;
-  align-items: flex-end;
+html body {
+  min-height: 100%;
+  padding: 0;
+  margin: 0;
 }
-#nav-bar a {
+
+body {
+  font-family: sans-serif;
+  color: #222;
+  display: block;
+  line-height: 1.6;
+  height: auto;
+  position: relative;
+  overflow: hidden;
+}
+
+div {
+  display: block;
+}
+
+a {
+  font-family: inherit;
   text-decoration: none;
 }
 
-#hplogo {
-  width: 50px;
-  height: 25px;
+.site-wrapper-home {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.body-home .site-wrapper-home {
+  background-color: #f7f7f7;
+}
+
+.content-wrapper-home {
+  position: absolute;
+  margin: auto;
+  width: 100%;
+  left: 0;
+  right: 0;
+  z-index: 12;
+}
+
+.content-home {
+  visibility: visible;
+}
+
+.logo-wrap-home {
+  position: relative;
+  display: block;
+  max-width: 300px;
+  margin: -1.25em auto 0.8em;
+}
+
+.logo-homepage {
+  width: 205px;
+  height: 200px;
+  display: block;
+  position: relative;
+  margin: 0 auto;
+  background-image: url(./logo_homepage.normal.svg);
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  color: transparent;
+  text-indent: -9999px;
+  font-size: 0px;
+}
+
+.search-wrap-home {
+  padding: 1.3em 0.8em 1em;
+  max-width: 590px;
+  margin: auto;
+  display: block;
+  float: none;
+  width: 70%;
+}
+
+.search-home {
+  font-size: 1.14em;
+}
+
+.search-adv {
+  box-sizing: border-box;
+  border-radius: 4px;
+  height: 2.8em;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.06);
 }
 
 /*# sourceMappingURL=style.css.map */
