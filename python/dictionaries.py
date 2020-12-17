@@ -8,3 +8,4 @@ houses["Hermione"] = "Gryffindor"
 
 # Print out Hermione's house
 print(houses["Hermione"])
+print(houses)
