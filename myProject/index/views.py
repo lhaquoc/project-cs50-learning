@@ -5,3 +5,8 @@ from django.shortcuts import render
 
 def index(request):
     return render(request, "index/index.html")
+
+def greet(request, name):
+    return render(request, "index/greet.html", {
+        "name": name.capitalize()
+    })
