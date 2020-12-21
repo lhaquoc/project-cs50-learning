@@ -1,2 +1,7 @@
 .vscode/*
 .vs/*
+.vs/VSWorkspaceState.json
+.vscode/settings.json
+lecture3/hello/__pycache__/*
+myProject/index/__pycache__/*
+myProject/index/migrations/__pycache__/*
