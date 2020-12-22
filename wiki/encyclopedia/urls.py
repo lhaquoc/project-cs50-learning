@@ -1,9 +1,8 @@
 from django.urls import path
-from . import views
 
-app_name = "tasks"
+from . import views
 
 urlpatterns = [
     path("", views.index, name="index"),
-    path("add", views.add, name="add")
+    path("wiki/<str:title>", views.entry, name="entry")
 ]
