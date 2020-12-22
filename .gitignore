@@ -1,5 +1,6 @@
 .vscode/*
 .vs/*
+<<<<<<< HEAD
 .vs/VSWorkspaceState.json
 .vscode/settings.json
 lecture3/hello/__pycache__/*
@@ -50,3 +51,5 @@ myProject/db.sqlite3
 myProject/db.sqlite3
 myProject/db.sqlite3
 myProject/db.sqlite3
+=======
+>>>>>>> e6b0fbcf50c33a26c99d11575d784931db43bb45
