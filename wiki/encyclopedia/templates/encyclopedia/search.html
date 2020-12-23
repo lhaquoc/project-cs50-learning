@@ -5,7 +5,7 @@
 {% endblock %}
 
 {% block body %}
-    {% for item in searched %}
+    {% for item in items %}
         <h2>Found pages:</h2>
         <li><a href="wiki/{{item}}">{{ item }}</a></li>
         {% empty %}
