@@ -46,26 +46,25 @@ def index(request):
                         'title': item,
                         'form': Search()
                     }
-                    return render(request, "encyclopedia/entry.html", context)
+                    return render(request, ENTRY_PAGE, context)
                 elif item.lower() in i.lower(): 
                     items.append(i)
                     context = {
                         'items': items, 
                         'form': Search()
                     }
-                    return render(request, "encyclopedia/search.html", context)
+                    return render(request, SEARCH_PAGE, context)
                 else:
                     context = {
                         'items': items, 
                         'form': Search()
                     }
-            return render(request, "encyclopedia/search.html", context)
-
+            return render(request, SEARCH_PAGE, context)
         else:
-            return render(request, "encyclopedia/index.html", {"form": form})
+            return render(request, INDEX_PAGE, {"form": form})
     else:
-        return render(request, "encyclopedia/index.html", {
-            "entries": util.list_entries(), "form":Search()
+        return render(request, INDEX_PAGE, {
+            "entries": entries, "form":Search()
         })
 
 """ def search(request):
