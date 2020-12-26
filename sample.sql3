@@ -1,0 +1,44 @@
+-- SQLite
+CREATE TABLE passengers (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    first TEXT NOT NULL,
+    last TEXT NOT NULL,
+    flight_id INTEGER NOT NULL
+);
+
+INSERT INTO passengers (first, last, flight_id) VALUES ("Harry", "Potter", 1),("Ron", "Weasley", 1),("Hermione", "Granger", 2),("Draco", "Malfoy", 4),("Luna", "Lovegood", 6),("Ginny", "Weasley", 6);
+
+CREATE TABLE people (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    first TEXT NOT NULL,
+    last TEXT NOT NULL
+);
+
+INSERT INTO people (first, last)
+VALUES 
+    ("Harry", "Potter"),
+    ("Ron", "Weasley"),
+    ("Hermione", "Granger"),
+    ("Draco", "Malfoy"),
+    ("Luna", "Lovegood"),
+    ("Ginny", "Weasley");
+
+CREATE TABLE airports (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    code TEXT NOT NULL,
+    city TEXT NOT NULL
+);
+
+INSERT INTO airports (code, city) 
+VALUES 
+    ("JFK", "New York"),
+    ("PVG", "Shanghai"),
+    ("IST", "Istanbul"),
+    ("LHR", "London"),
+    ("SVO", "Moscow"),
+    ("LIM", "Lima"),
+    ("CDG", "Paris"),
+    ("NRT", "Tokyo");
+
+
+

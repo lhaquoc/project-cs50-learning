@@ -1,0 +1,12 @@
+("JFK", "New York"),
+("PVG", "Shanghai"),
+("IST", "Istanbul"),
+("LHR", "London"),
+("SVO", "Moscow"),
+("LIM", "Lima"),
+("CDG", "Paris"),
+("NRT", "Tokyo");
+
+("Harry", "Potter", 1),("Ron", "Weasley", 1),("Hermione", "Potter", 2),("Draco", "Malfoy", 4),("Luna", "Lovegood", 6),("Ginny", "Weasley", 6);
+
+("Harry", "Potter"),("Ron", "Weasley"),("Hermione", "Granger"),("Draco", "Malfoy"),("Luna", "Lovegood"),("Ginny", "Weasley");
