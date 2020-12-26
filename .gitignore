@@ -1,2 +1,9 @@
 .vscode/*
 .vs/*
+python/__pycache__/functions.cpython-38.pyc
+myProject/newyear/__pycache__/__init__.cpython-37.pyc
+.gitignore
+myProject/newyear/__pycache__/models.cpython-37.pyc
+.vs/VSWorkspaceState.json
+.vs/slnx.sqlite
+.vs/project-cs50-learning/v16/.suo
