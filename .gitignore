@@ -1,6 +1,12 @@
 .vscode/*
 .vs/*
-<<<<<<< HEAD
+python/__pycache__/functions.cpython-38.pyc
+myProject/newyear/__pycache__/__init__.cpython-37.pyc
+.gitignore
+myProject/newyear/__pycache__/models.cpython-37.pyc
+.vs/VSWorkspaceState.json
+.vs/slnx.sqlite
+.vs/project-cs50-learning/v16/.suo
 .vs/VSWorkspaceState.json
 .vscode/settings.json
 lecture3/hello/__pycache__/*
@@ -47,9 +53,3 @@ wiki/wiki/__pycache__/settings.cpython-39.pyc
 wiki/wiki/__pycache__/urls.cpython-39.pyc
 wiki/wiki/__pycache__/wsgi.cpython-39.pyc
 myProject/db.sqlite3
-myProject/db.sqlite3
-myProject/db.sqlite3
-myProject/db.sqlite3
-myProject/db.sqlite3
-=======
->>>>>>> e6b0fbcf50c33a26c99d11575d784931db43bb45
