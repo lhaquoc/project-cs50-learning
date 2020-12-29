@@ -1,0 +1,14 @@
+{% extends "auctions/layout.html" %}
+{% load static %}
+
+
+{% block body %}
+<div class="container-fluid">
+    {% if auctions %}
+    {% else %}
+        <div class="empty">
+            <p>This category doesn't have auctions.</p>
+        </div>
+    {% endif %}
+</div>
+{% endblock %}
