@@ -104,10 +104,49 @@ def add_auction(request):
     pass
 
 def watchlist(request):
-    pass
+    persons = Person.objects.all()
+    if request.user.id is None:
+        return redirect('index')
 
-def my_listings(request):
-    pass
+    my_watchlist = PersonalWatchlist.objects.get(user=request.user)
+    totalAuctions = my_watchlist.auctions.count()
+    context = {
+        'persons': persons,
+        'my_watchlist': my_watchlist,
+        'totalAuctions': totalAuctions
+    }
+    return render(request, "auctions/watchlist.html", context)
+
+def my_listings(request, user):
+    user_object = User.objects.get(username=user)
+    auctions = Auction.objects.filter(user=user_object)
+    my_watchlist = PersonalWatchlist.objects.get(user=request.user)
+    totalAuctions = my_watchlist.auctions.count()
+    if request.user.username != user:
+        return redirect('my_listings', user=request.user.username)
+
+    context = {
+        'auctions': auctions,
+        'my_watchlist': my_watchlist,
+        'totalAuctions': totalAuctions
+    }
+
+    return render(request, "auctions/my_listing.html", context)
 
 def auction_view(request, auction):
     pass
+
+def delete_auction_from_watchlist(request, auction):
+    if request.method == 'POST':
+        auction = Auction.objects.get(id=auction)
+        my_watchlist = PersonalWatchlist.objects.get(user=request.user)
+        my_watchlist.auctions.remove(auction)
+        my_watchlist.save()
+    return HttpResponse('success')
+
+def delete_auction(request, auction):
+    if request.method == 'GET':
+        auction = Auction.objects.get(id=auction)
+        if auction.user == request.user:
+            auction.delete()
+            return redirect('index')
