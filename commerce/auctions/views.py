@@ -117,6 +117,18 @@ def watchlist(request):
     }
     return render(request, "auctions/watchlist.html", context)
 
+def add_to_watchlist(request, auction):
+    if request.method == 'POST':
+        auction_to_add = Auction.objects.get(id=auction)
+        watchlist = PersonalWatchlist.objects.get(user=request.user)
+        if auction_to_add in watchlist.auctions.all():
+            watchlist.auctions.remove(auction_to_add)
+            watchlist.save()
+        else:
+            watchlist.auctions.add(auction_to_add)
+            watchlist.save()
+        return HttpResponse('success')
+
 def my_listings(request, user):
     user_object = User.objects.get(username=user)
     auctions = Auction.objects.filter(user=user_object)
@@ -134,7 +146,23 @@ def my_listings(request, user):
     return render(request, "auctions/my_listing.html", context)
 
 def auction_view(request, auction):
-    pass
+    if request.method == 'GET':
+        persons = Person.objects.all()
+        if request.user.id is None:
+            return redirect('login')
+        auction = Auction.objects.get(id=auction)
+        my_watchlist = PersonalWatchlist.objects.get(user=request.user)
+        totalAuctions = my_watchlist.auctions.count()
+        comments = auction.comments.all().order_by('id').reverse()
+        context = {
+            'auction': auction,
+            'my_watchlist': my_watchlist,
+            'persons': persons,
+            'comments': comments,
+            'totalAuctions': totalAuctions
+        }
+
+        return render(request, 'auctions/auction_view.html', context)
 
 def delete_auction_from_watchlist(request, auction):
     if request.method == 'POST':
@@ -142,7 +170,9 @@ def delete_auction_from_watchlist(request, auction):
         my_watchlist = PersonalWatchlist.objects.get(user=request.user)
         my_watchlist.auctions.remove(auction)
         my_watchlist.save()
-    return HttpResponse('success')
+        return HttpResponse('success')
+    else:
+        return HttpResponse('failed')
 
 def delete_auction(request, auction):
     if request.method == 'GET':
